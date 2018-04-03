@@ -9,7 +9,7 @@ def repo = "artifact-repo"
 def rev = args[1]
 
 if (args[0] == 'pull'){
-    def pull_url ="http://EPBYMINW1766.minsk.epam.com:8081/repository/artifact-repo/Pipeline/EasyHello/${rev}/pipeline-ykhodzin-${rev}.tar.gz"
+    def pull_url ="http://nexus/repository/artifact-repo/Pipeline/EasyHello/${rev}/pipeline-ykhodzin-${rev}.tar.gz"
     new File("download-${rev}.tar.gz").withOutputStream { out ->
         def url = new URL(pull_url.toString()).openConnection()
         url.setRequestProperty("Authorization", "Basic ${authString}")
@@ -17,7 +17,7 @@ if (args[0] == 'pull'){
     }
 }
 if (args[0] == 'push'){
-    def url = new URL("http://EPBYMINW1766.minsk.epam.com:8081/repository/artifact-repo/Pipeline/EasyHello/${rev}/pipeline-ykhodzin-${rev}.tar.gz").openConnection()
+    def url = new URL("http://nexus/repository/artifact-repo/Pipeline/EasyHello/${rev}/pipeline-ykhodzin-${rev}.tar.gz").openConnection()
     url.doOutput = true
     url.setRequestMethod("PUT")
     url.setRequestProperty("Authorization", "Basic ${authString}")
