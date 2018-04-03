@@ -1,0 +1,5 @@
+{
+  "name": "CreateUser",
+  "content": "security.addUser('Myuser','My','User','my@my.my',true,'mypass',['nx-admin'])",
+  "type": "groovy"
+}
