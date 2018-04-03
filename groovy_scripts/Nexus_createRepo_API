@@ -1,0 +1,5 @@
+{
+  "name": "Repo",
+  "content": "repository.createMavenHosted('MyRepo', BlobStoreManager.DEFAULT_BLOBSTORE_NAME, VersionPolicy.RELEASE, WritePolicy.ALLOW_ONCE, LayoutPolicy.STRICT))",
+  "type": "groovy"
+}
