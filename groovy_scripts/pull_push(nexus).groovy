@@ -4,7 +4,7 @@
 @Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1')
 import static groovyx.net.http.ContentType.*
 
-def authString = "YWRtaW46YWRtaW4xMjM="
+def authString = >>>your creds here<<< //getBytes().encodeBase64().toString()
 def repo = "artifact-repo"
 def group = args[1].split("-",3)[0]
 def app = args[1].split("-",3)[1]
